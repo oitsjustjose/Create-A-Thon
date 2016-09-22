@@ -1,140 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Framework7 Kitchen Sink</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            position: relative;
-            min-width: 900px;
-            font-family: Helvetica Neue, Roboto, Arial, sans-serif;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            display: block;
-            border: none;
-        }
-        .devices {
-            padding-top: 100px;
-            padding-bottom: 40px;
-            overflow: hidden;
-            width: 840px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .device-ios, .device-android {
-            float: left;
-        }
-        .device-ios {
-            width: 320px;
-            height: 548px;
-            background: #111;
-            border-radius: 55px;
-            box-shadow: 0px 0px 0px 2px #aaa;
-            padding: 105px 20px;
-            position: relative;
-            margin-right: 80px;
-        }
-        .device-ios:before {
-            content: '';
-            width: 60px;
-            height: 10px;
-            border-radius: 10px;
-            position: absolute;
-            left: 50%;
-            margin-left: -30px;
-            background: #333;
-            top: 50px;
-        }
-        .device-ios:after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            left: 50%;
-            margin-left: -30px;
-            bottom: 20px;
-            border-radius: 100%;
-            box-sizing: border-box;
-            border: 5px solid #333;
-        }
-        .device-android {
-            width: 360px;
-            height: 640px;
-            position: relative;
-            background: #111;
-            padding: 60px 20px;
-            box-shadow: 0px 0px 0px 2px #aaa;
-            border-radius: 20px;
-        }
-        .device-android:before {
-            content: '';
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            position: absolute;
-            left: 50%;
-            margin-left: -7px;
-            background: #666;
-            top: 25px;
-        }
-        .device-android:after {
-            content: '';
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            position: absolute;
-            left: 50px;
-            background: #444;
-            top: 30px;
-        }
-        .button {
-            position: absolute;
-            width: 200px;
-            margin-left: -100px;
-            left: 50%;
-            top: -44px;
-            margin-top: -30px;
-            box-sizing: border-box;
-            text-align: center;
-            line-height: 44px;
-            border-radius: 3px;
-            text-decoration: none;
-            color: blue;
-            font-size: 14px;
-        }
-        .device-ios .button {
-            border: 1px solid #007aff;
-            color: #007aff;
-        }
-        .device-ios .button:active {
-            background: rgba(0, 122, 255, 0.15);
-        }
-        .device-android .button {
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            color: #2196f3;
-            text-transform: uppercase;
-        }
-        .device-android .button:active {
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            background: rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="devices">
-        <div class="device device-ios">
-            <a href="./kitchen-sink-ios/" class="button">Full Screen Preview</a>
-            <iframe src="./kitchen-sink-ios/" scrolling="no" frameborder="0"></iframe>
-        </div>
-        <div class="device device-android">
-            <a href="./kitchen-sink-material/" class="button">Full Screen Preview</a>
-            <iframe src="./kitchen-sink-material/" scrolling="no" frameborder="0"></iframe>
-        </div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Shopkin Collector</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
     </div>
-    
-</body>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">Shopkin Collector</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <!--This is specifically the part inside the white space-->
+              <div class="row">
+                <div class="col-auto"><div class="gridImage"><img src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Rainbow%20Kate%20Assets1.png"></div></div>
+                <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Sara%20Sushi%20Assets1.png"></div>
+                <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TISSUE-BOX.png"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TENNIS-RACKET.png"></div>
+                <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TEA-POT.png"></div>
+                <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TAMBOURINE.png"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__SKATEBOARD.png"></div>
+                <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__ROLLERBLADES.png"></div>
+                <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__REMOTE-GAME.png"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
 </html>
