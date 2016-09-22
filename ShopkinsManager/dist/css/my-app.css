@@ -1,0 +1,22 @@
+.col-auto {
+  background: #FFF;
+  text-align: center;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.center {
+  color: #33ccff;
+}
+
+img {
+    max-width: 100%;
+    max-height: 160px;
+    height: auto;
+    width: auto\9;
+}
