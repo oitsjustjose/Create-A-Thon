@@ -11,10 +11,7 @@ package com.brogrammers.shopkinmanager;
  * --Jose Stovall / oitsjustjose [GitHub]
  */
 
-import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.GeolocationPermissions;
@@ -44,11 +41,8 @@ public class MainActivity extends Activity
         setContentView(R.layout.activity_main);
         WebView webView = (WebView) findViewById(R.id.webView1);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setAllowContentAccess(true);
-        webView.getSettings().setAllowFileAccess(true);
         webView.getSettings().setPluginState(WebSettings.PluginState.ON);
-        webView.getSettings().setMixedContentMode(0);
-        webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+        webView.getSettings().setMixedContentMode(0);t
         webView.setWebViewClient(new NimbleKitClient());
 
         webView.setWebChromeClient(new WebChromeClient()
@@ -57,34 +51,6 @@ public class MainActivity extends Activity
             {
                 callback.invoke(origin, true, false);
             }
-
-            @Override
-            public void onActivityResult(int requestCode, int resultCode, Intent data)
-            {
-                switch(requestCode)
-                {
-                    case TAKE_PICTURE:
-                        if(resultCode == Activity.RESULT_OK)
-                        {
-                            Uri mypic = picUri;
-                            mUploadMessage.onReceiveValue(mypic);
-                            mUploadMessage = null;
-                        }
-                        else
-                        {
-                            mUploadMessage.onReceiveValue(null);
-                            mUploadMessage = null;
-                            return;
-                        }
-
-                    default:
-                    {
-                        return;
-                    }
-                }
-            }
-
-
         });
         webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setDatabaseEnabled(true);
