@@ -1,57 +1,52 @@
+<!--Using framework7 -->
 <!DOCTYPE html>
 <html>
+  <!--This is all just header stuff - it doesn't really apply anything to the webpage's content itself except the Tab Title-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Shopkin Collector</title>
-    <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="css/framework7.ios.min.css">
-    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
-    <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <link rel="stylesheet" href="css/shopkin_collector.css">
   </head>
+  <!--This is the actual window-->
   <body>
-    <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
-    <!-- Panels overlay-->
     <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
       <div class="content-block">
-        <p>Left panel content goes here</p>
-      </div>
-    </div>
-    <!-- Right panel with cover effect-->
-    <div class="panel panel-right panel-cover">
-      <div class="content-block">
-        <p>Right panel content goes here</p>
-      </div>
-    </div>
-    <!-- Views-->
-    <div class="views">
-      <!-- Your main view, should have "view-main" class-->
-      <div class="view view-main">
-        <!-- Top Navbar-->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <!-- We have home navbar without left link-->
-            <div class="center sliding">Shopkin Collector</div>
-            <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
-            </div>
+        <!--This is how you add a link to external sites. Different from default HTML thanks to framework7-->
+        <div class="card">
+          <div class="list-block">
+            <ul>
+              <li><a href="http://www.github.com/oitsjustjose/Brogrammers" class="button external" target="_blank">GitHub</a><li>
+            </ul>
           </div>
         </div>
-        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+      </div>
+    </div>
+
+    <!--Navbar / Top Bar Content:-->
+    <div class="views">
+      <div class="view view-main">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+            <center>Shopkin Collector</center>
+          </div>
+        </div>
         <div class="pages navbar-through toolbar-through">
-          <!-- Page, data-page contains page name-->
           <div data-page="index" class="page">
-            <!-- Scrollable page content-->
+            <!--Actual Page Content:-->
             <div class="page-content">
-              <!--This is specifically the part inside the white space-->
+              <br><br><br>
               <div class="row">
-                <div class="col-auto"><div class="gridImage"><img src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Rainbow%20Kate%20Assets1.png"></div></div>
+                <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/SPKDS2%20Donatina%20Characters%20Assets_0.png"></div>
                 <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Sara%20Sushi%20Assets1.png"></div>
                 <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TISSUE-BOX.png"></div>
               </div>
@@ -71,15 +66,9 @@
             </div>
           </div>
         </div>
-        <!-- Bottom Toolbar-->
-        <div class="toolbar">
-          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
-        </div>
       </div>
     </div>
-    <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="js/framework7.min.js"></script>
-    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/framework7.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
   </body>
 </html>
