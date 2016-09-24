@@ -8,20 +8,24 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Shopkin Collector</title>
+    <link rel="icon" type="image/png" href="http://puu.sh/rmuqE/54883d7a68.png">
     <link rel="stylesheet" href="css/framework7.material.css">
     <link rel="stylesheet" href="css/framework7.material.colors.css">
     <link rel="stylesheet" href="css/shopkin_collector.css">
   </head>
   <!--This is the actual window-->
-  <body>
+  <!--change class="theme-bluegray" to something else if you want-->
+  <body class="theme-bluegray">
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay"></div>
     <div class="panel panel-left panel-reveal">
       <div class="content-block">
-        <!--This is how you add a link to external sites. Different from default HTML thanks to framework7-->
-        <a href="index.html" class="button button-raised button-fill color-pink external" margin-bottom=6px >Home</a>
-        <a href="browseAll.html" class="button button-raised button-fill color-pink external">Browse Shopkins</a>
-        <a href="http://www.github.com/oitsjustjose/Brogrammers" class="button button-raised button-fill color-pink external" target="_blank">GitHub</a>
+        <!--This is where the sidebar buttons are handled-->
+        <a href="index.html" class="button button-raised button-fill color-multi external">My Collection</a>
+        <a href="browseAll.html" class="button button-raised button-fill color-multi external">Browse Shopkins</a>
+        <a href="#" class="button button-raised button-fill color-multi external">My Friends</a>
+        <a href="#" class="button button-raised button-fill color-multi external">Compete!</a>
+        <a href="#" class="button button-raised button-fill color-multi external">Leaderboard</a>
       </div>
     </div>
 
@@ -33,11 +37,11 @@
             <div class="left">
               <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
             </div>
-            <center>Shopkin Collector</center>
+            <center>My Collection</center>
           </div>
         </div>
         <div class="pages navbar-through toolbar-through">
-          <div data-page="index" class="page">
+          <div data-page="index" class="page" background-color="">
             <!--Actual Page Content:-->
             <div class="page-content">
               <br><br><br>
@@ -61,6 +65,10 @@
 
             </div>
           </div>
+        </div>
+        <!--This is for the bottom bar:-->
+        <div class="toolbar">
+          <div class="toolbar-inner"><a href="http://www.github.com/oitsjustjose/Brogrammers" class="link external" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" width=24px height=24px alt="Site and App Source"></a><a href="#" class="link external">Log Out</a></div>
         </div>
       </div>
     </div>
