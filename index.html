@@ -1,5 +1,8 @@
+<!--Using framework7 -->
 <!DOCTYPE html>
 <html>
+
+  <!--This is all just header stuff - it doesn't really apply anything to the webpage's content itself except the Tab Title-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -10,19 +13,17 @@
     <link rel="stylesheet" href="css/framework7.material.colors.css">
     <link rel="stylesheet" href="css/shopkin_collector.css">
   </head>
+  <!--This is the actual window-->
   <body>
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay"></div>
     <div class="panel panel-left panel-reveal">
       <div class="content-block">
-        <p>Left panel content goes here</p>
+        <div class="">Wilkommen</div>
       </div>
     </div>
-    <div class="panel panel-right panel-cover">
-      <div class="content-block">
-        <p>Right panel content goes here</p>
-      </div>
-    </div>
+
+    <!--Navbar / Top Bar Content:-->
     <div class="views">
       <div class="view view-main">
         <div class="navbar">
@@ -35,10 +36,11 @@
         </div>
         <div class="pages navbar-through toolbar-through">
           <div data-page="index" class="page">
+            <!--Actual Page Content:-->
             <div class="page-content">
               <br><br><br>
               <div class="row">
-                <div class="col-auto"><input type="file" id="files" name="files"  accept="image/*" capture="camera" ></div>
+                <div class="col-auto"><form method="post" action="" enctype="multipart/form-data"><input type="file" accept="image/*" name="file"><input type="submit"></form></div>
                 <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Sara%20Sushi%20Assets1.png"></div>
                 <div class="col-auto"><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TISSUE-BOX.png"></div>
               </div>
@@ -58,17 +60,10 @@
             </div>
           </div>
         </div>
-        <div class="toolbar">
-          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
-        </div>
+
       </div>
     </div>
-    <script>
-    function getIMG (String ID) {
-      return document.getElementById(ID);
-    }
-    </script>
-    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/framework7.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
   </body>
 </html>
