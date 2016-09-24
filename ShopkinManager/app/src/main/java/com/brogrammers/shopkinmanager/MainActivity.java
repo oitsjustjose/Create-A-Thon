@@ -42,7 +42,7 @@ public class MainActivity extends Activity
         WebView webView = (WebView) findViewById(R.id.webView1);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setPluginState(WebSettings.PluginState.ON);
-        webView.getSettings().setMixedContentMode(0);t
+        webView.getSettings().setMixedContentMode(0);
         webView.setWebViewClient(new NimbleKitClient());
 
         webView.setWebChromeClient(new WebChromeClient()
