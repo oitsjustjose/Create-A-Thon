@@ -68,3 +68,9 @@ img {
 .page-content {
   background: #F5F5F5 ;
 }
+
+.col-auto {
+  border-color: #E91E63;
+  border-width: 2px;
+  background-color: #FFFFFF;
+}
