@@ -13,6 +13,7 @@ package com.brogrammers.shopkinmanager;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.GeolocationPermissions;
 import android.webkit.WebChromeClient;
@@ -22,6 +23,8 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends Activity
 {
+    private WebView webView;
+
     class NimbleKitClient extends WebViewClient
     {
         @Override
@@ -39,10 +42,10 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        WebView webView = (WebView) findViewById(R.id.webView1);
+        this.webView = (WebView) findViewById(R.id.webView1);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setPluginState(WebSettings.PluginState.ON);
-        webView.getSettings().setMixedContentMode(0);t
+        webView.getSettings().setMixedContentMode(0);
         webView.setWebViewClient(new NimbleKitClient());
 
         webView.setWebChromeClient(new WebChromeClient()
@@ -57,5 +60,24 @@ public class MainActivity extends Activity
         webView.loadUrl("http://oitsjustjose.github.io/Brogrammers/");
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webView.requestFocus(View.FOCUS_DOWN);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if (event.getAction() == KeyEvent.ACTION_DOWN)
+        {
+            switch (keyCode)
+            {
+                case KeyEvent.KEYCODE_BACK:
+                    if (webView.canGoBack())
+                        webView.goBack();
+                    else
+                        finish();
+                    return true;
+            }
+
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
