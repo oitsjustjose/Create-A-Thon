@@ -44,7 +44,7 @@ img {
 	margin-top: 10px;
 	display: inline-block;
 	vertical-align: top;
-	width: 380px;
+	width: 360px;
 	font-size: 18px;
 }
 
@@ -55,7 +55,7 @@ img {
 .feature-title {
 	margin-left: 15px;
 	font-size: 35px;
-	width: 360px;
+	width: 350px;
 	padding-bottom: 10px;
 	border-bottom: 1px #ccc solid;
 	margin-bottom: 10px;
