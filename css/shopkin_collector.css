@@ -44,7 +44,7 @@ img {
 	margin-top: 10px;
 	display: inline-block;
 	vertical-align: top;
-	width: 600px;
+	width: 350px;
 	font-size: 18px;
 }
 
@@ -55,7 +55,7 @@ img {
 .feature-title {
 	margin-left: 15px;
 	font-size: 35px;
-	width: 500px;
+	width: 340px;
 	padding-bottom: 10px;
 	border-bottom: 1px #ccc solid;
 	margin-bottom: 10px;
@@ -67,4 +67,10 @@ img {
 
 .page-content {
   background: #F5F5F5 ;
+}
+
+.col-auto {
+  border-color: #E91E63;
+  border-width: 2px;
+  background-color: #FFFFFF;
 }
