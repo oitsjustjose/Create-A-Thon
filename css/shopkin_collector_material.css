@@ -3,11 +3,11 @@
   text-align: center;
   color: #000;
   border: 1px solid #ddd;
-  padding: 5px;
 }
 
-.row {
+.row  {
   margin-bottom: 10px;
+  margin: 12px;
 }
 
 .center {
@@ -16,7 +16,7 @@
 
 img {
     max-width: 100%;
-    max-height: 128px;
+    max-height: 256px;
     height: auto;
     width: auto\9;
 }
