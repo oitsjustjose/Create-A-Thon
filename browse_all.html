@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Shopkin Collector</title>
     <link rel="icon" type="image/png" href="http://puu.sh/rmBIY/b081e97590.png">
-    <link rel="stylesheet" href="css/framework7.material.css">
-    <link rel="stylesheet" href="css/framework7.material.colors.css">
-    <link rel="stylesheet" href="css/shopkin_collector.css">
+    <link rel="apple-touch-icon" href="http://puu.sh/rriyR/ab8b4e23a3.png">
+    <title>Shopkin Collector</title>
   </head>
+
+
   <!--This is the actual window-->
   <body>
     <div class="statusbar-overlay"></div>
@@ -22,9 +22,11 @@
         <!--This is where the sidebar buttons are handled-->
         <a href="index.html" class="button button-raised button-fill color-pink external">My Collection</a>
         <a href="browse_all.html" class="button button-raised button-fill color-pink external">Browse Shopkins</a>
+      <!--
         <a href="#" class="button button-raised button-fill color-pink external">My Friends</a>
         <a href="#" class="button button-raised button-fill color-pink external">Compete!</a>
         <a href="#" class="button button-raised button-fill color-pink external">Leaderboard</a>
+      -->
       </div>
     </div>
 
@@ -106,7 +108,25 @@
         <div class="toolbar-inner"><a href="http://www.github.com/oitsjustjose/Brogrammers" class="link external" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" width=24px height=24px alt="Site and App Source"></a><a href="login_screen.html" class="link external">Log Out</a></div>
       </div>
     </div>
-    <script type="text/javascript" src="js/framework7.js"></script>
-    <script type="text/javascript" src="js/my-app.js"></script>
+    <script src="js/framework7.min.js"></script>
+    <script>
+      (function () {
+        if (Framework7.prototype.device.ios) {
+              Dom7('head').append(
+                '<link rel="stylesheet" href="css/framework7.ios.min.css">' +
+                '<link rel="stylesheet" href="css/framework7.ios.colors.min.css">' +
+                '<link rel="stylesheet" href="css/shopkin_collector_ios.css">'
+              );
+          }
+          else {
+              Dom7('head').append(
+                '<link rel="stylesheet" href="css/framework7.material.min.css">' +
+                '<link rel="stylesheet" href="css/framework7.material.colors.min.css">' +
+                '<link rel="stylesheet" href="css/shopkin_collector_material.css">'
+              );
+          }
+      })();
+    </script>
+    <script src="js/my-app.js"></script>
   </body>
 </html>
