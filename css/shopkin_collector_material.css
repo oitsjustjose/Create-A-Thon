@@ -61,6 +61,32 @@ img {
 	margin-bottom: 10px;
 }
 
+.popup-title {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 35px;
+  padding-bottom: 10px;
+  border-bottom: 1px #ccc solid;
+  margin-bottom: 10px;
+  max-width: inherit;
+}
+
+.popup-desc {
+  margin-left: 15px;
+}
+
+.popup-info {
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18px;
+  max-width: inherit;
+}
+
+.popup-info ul {
+  font-size: 18px;
+}
+
 .feature-desc {
 	margin-left: 15px;
 }
@@ -81,8 +107,8 @@ img {
   margin-left: 8px;
 }
 
-.popup-001 {
-  border-color: #E91E63;
-  border-width: 2px;
-
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  margin-top: 12px;
 }

@@ -73,9 +73,55 @@
     <!--This stuff is all specifically for pop-ups-->
     <div class="popup popup-001">
       <!--You can use the following line anywhere - it's a "close" button-->
+      <!--This "close" button should be sending the data to the back-end too..-->
       <div align=right><a href="#" class="close-popup"><img src="http://puu.sh/rsg2a/4a5f7b889f.png" width=32px height=32px margin=8px></a></div>
-      <div class="feature-title eight-px-margin_left">About Donatina</div>
-      <div class="feature-info eight-px-margin_left">Life is "hole" lot of fun for Donatina! With her head in the clouds, she's a "Happy-Dough-Lucky" kinda girl who samples more donuts than she sells! As sweet as pink frosting, she's always 'round to help her friends!</div>
+      <div class="popup-title eight-px-margin_left" contentEditable=true>Donatina</div>
+      <div class="popup-info eight-px-margin_left">
+        I SHOULD PUT FEATURE INFORMATION HERE
+        <textarea rows="4" cols="50">Notes..</textarea>
+      </div>
+      <div class="list-block">
+      <ul>
+        <!-- Single radio input -->
+        <li>
+          <label class="label-radio item-content">
+            <!-- Checked by default -->
+            <input type="radio" name="have_status_001" value="Have">
+            <div class="item-media">
+              <i class="icon icon-form-radio"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title">I Have One</div>
+            </div>
+          </label>
+        </li>
+        <!-- Another radio input -->
+        <li>
+          <label class="label-radio item-content">
+            <input type="radio" name="have_status_001" value="Want">
+            <div class="item-media">
+              <i class="icon icon-form-radio"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title">I Want One</div>
+            </div>
+          </label>
+        </li>
+
+        <li>
+          <label class="label-radio item-content">
+            <input type="radio" name="have_status_001" value="Neither" checked="checked">
+            <div class="item-media">
+              <i class="icon icon-form-radio"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title">Neither</div>
+            </div>
+          </label>
+        </li>
+
+      </ul>
+    </div>
     </div>
 
     <!--This stuff is used specifically to load the proper CSS file depending on the device-->
