@@ -1,12 +1,22 @@
+var isAndroid = Framework7.prototype.device.android === true;
+var isIos = Framework7.prototype.device.ios === true;
+
+Template7.global = {
+    android: isAndroid,
+    ios: isIos
+};
+
 // Initialize your app
-var myApp = new Framework7();
+var myApp = new Framework7({
+    material: isAndroid ? true : false,
+    template7Pages: true
+});
 
 // Export selectors engine
 var $$ = Dom7;
 
-// Add view
+
 var mainView = myApp.addView('.view-main', {
-    // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true
 });
 
