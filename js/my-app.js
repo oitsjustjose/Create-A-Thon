@@ -28,6 +28,16 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+var a=document.getElementsByTagName("a");
+for(var i=0;i<a.length;i++)
+{
+    a[i].onclick=function()
+    {
+        window.location=this.getAttribute("href");
+        return false
+    }
+}
+
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {
