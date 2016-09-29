@@ -28,6 +28,7 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+// Prevents iOS devices from wandering...
 var a=document.getElementsByTagName("a");
 for(var i=0;i<a.length;i++)
 {
