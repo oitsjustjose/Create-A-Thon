@@ -73,4 +73,16 @@ img {
   border-color: #E91E63;
   border-width: 2px;
   background-color: #FFFFFF;
+  max-width: 384px;
+  max-height: 384px;
+}
+
+.eight-px-margin_left {
+  margin-left: 8px;
+}
+
+.popup-001 {
+  border-color: #E91E63;
+  border-width: 2px;
+
 }
