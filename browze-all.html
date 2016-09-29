@@ -1,0 +1,106 @@
+<!--Using framework7 -->
+<!DOCTYPE html>
+<html>
+  <!--This is all just header stuff - it doesn't really apply anything to the webpage's content itself except the Tab Title-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" type="image/png" href="http://puu.sh/rmBIY/b081e97590.png">
+    <link rel="apple-touch-icon" href="http://puu.sh/rriyR/ab8b4e23a3.png">
+    <title>Shopkin Collector</title>
+  </head>
+
+<!--This is the actual window-->
+<body>
+  <div class="statusbar-overlay"></div>
+
+  <div class="panel-overlay"></div>
+  <div class="panel panel-left panel-reveal">
+    <div class="content-block">
+      <!--This is where the sidebar buttons are handled-->
+      <a href="index.html" class="button button-raised button-fill color-pink external">My Collection</a>
+      <a href="browse_all.html" class="button button-raised button-fill color-pink external">Browse Shopkins</a>
+    <!--
+      <a href="#" class="button button-raised button-fill color-pink external">My Friends</a>
+      <a href="#" class="button button-raised button-fill color-pink external">Compete!</a>
+      <a href="#" class="button button-raised button-fill color-pink external">Leaderboard</a>
+    -->
+    </div>
+  </div>
+
+  <!--Navbar / Top Bar Content:-->
+  <div class="views">
+    <div class="view view-main">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="left">
+            <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+          </div>
+          <center>Browse Shopkins</center>
+        </div>
+      </div>
+
+
+      <div class="pages navbar-through toolbar-through">
+        <div data-page="index" class="page">
+          <br><br><br>
+
+          <!--Actual Page Content:-->
+
+
+          <div class="page-content">
+            <div class="row">
+              <img class="col-auto" src="http://shopkinsworld.com/sites/default/files/SPKDS2%20Donatina%20Characters%20Assets_0.png"></img>
+              <div class="feature-info">
+                <div class="feature-title">Donatina</div>
+                <div class= "page-content">
+                <div class = "content-block">
+                  <p><a href="#" data-popup=".popup-aboutDonatina" class="open-popup"> About Donatina </a><p>
+                  </div>
+                </div>
+                <div class="popup popup-aboutDonatina">
+                  <div class="content-block">
+                    <p>About Donatina</p>
+                    <p><a href="#" class="close-popup">Close popup</a></p>
+                    <p>Life is "hole" lot of fun for Donatina! With her head in the clouds, she's a "Happy-Dough-Lucky" kinda girl who samples more donuts than she sells! As sweet as pink frosting, she's always 'round to help her friends!</p>
+                <div class="feature-desc">
+                  <!-- Life is "hole" lot of fun for Donatina! With her head in the clouds, she's a "Happy-Dough-Lucky" kinda girl who samples more donuts than she sells! As sweet as pink frosting, she's always 'round to help her friends! <br><br> -->
+                  <a href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=shopkins+Donatina&rh=i%3Aaps%2Ck%3Ashopkins+Donatina" class="external" target="_blank">Buy One Here!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+              <!--This is for the bottom bar:-->
+              <div class="toolbar">
+                <div class="toolbar-inner"><a href="http://www.github.com/oitsjustjose/Brogrammers" class="link external" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" width=24px height=24px alt="Site and App Source"></a><a href="login_screen.html" class="link external">Log Out</a></div>
+              </div>
+            </div>
+            <script src="js/framework7.min.js"></script>
+            <script>
+              (function () {
+                if (Framework7.prototype.device.ios) {
+                      Dom7('head').append(
+                        '<link rel="stylesheet" href="css/framework7.ios.min.css">' +
+                        '<link rel="stylesheet" href="css/framework7.ios.colors.min.css">' +
+                        '<link rel="stylesheet" href="css/shopkin_collector_ios.css">'
+                      );
+                  }
+                  else {
+                      Dom7('head').append(
+                        '<link rel="stylesheet" href="css/framework7.material.min.css">' +
+                        '<link rel="stylesheet" href="css/framework7.material.colors.min.css">' +
+                        '<link rel="stylesheet" href="css/shopkin_collector_material.css">'
+                      );
+                  }
+              })();
+            </script>
+            <script src="js/my-app.js"></script>
+          </body>
+        </html>
