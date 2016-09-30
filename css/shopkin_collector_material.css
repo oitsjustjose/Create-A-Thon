@@ -112,3 +112,29 @@ textarea {
   font-size: inherit;
   margin-top: 12px;
 }
+
+.page {
+  margin-top: 56px;
+}
+
+.demo-card-header-pic .card-header {
+  height: 20vw;
+  width:  24vw;
+  max-height: 20vw;
+  max-width: 24vw;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.color-gray {
+  font-size: 24px;
+  text-align: center;
+}
+
+p {
+  margin-top: 10px;
+	vertical-align: top;
+	width: 350px;
+	font-size: 18px;
+}
