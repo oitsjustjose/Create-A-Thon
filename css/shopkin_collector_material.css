@@ -49,6 +49,7 @@ img {
 	vertical-align: top;
 	width: 350px;
 	font-size: 18px;
+  text-align: justify;
 }
 
 .feature-info ul {
