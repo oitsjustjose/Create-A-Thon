@@ -3,7 +3,7 @@ div[class*="col-"] {
   padding: 5px;
   height: 100%
   display: block;
-  margin-top: 10%;
+  margin-bottom: 15%;
 }
 .row {
   margin-bottom: 15px;
