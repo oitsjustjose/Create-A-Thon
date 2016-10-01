@@ -1,8 +1,9 @@
-.col-auto {
-  background: #FFF;
-  text-align: center;
-  color: #000;
-  border: 1px solid #ddd;
+.col-50-sp {
+  background: #fff;
+  position: relative;
+  border-radius: 2px;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .row  {
@@ -34,10 +35,13 @@ img {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-	border-radius: 6px;
-	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.26);
   margin-left: 8px;
   margin-top: 20px;
+  background: #fff;
+  position: relative;
+  border-radius: 2px;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .feature-info {
@@ -111,4 +115,17 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   margin-top: 12px;
+}
+
+.card-header-text {
+  font-family: inherit;
+  font-size: 20px;
+  color: #616161;
+
+}
+
+.card-footer-text {
+  font-size: 14px;
+  margin-right: 8px;
+  border-radius: 2px;
 }
