@@ -15,6 +15,12 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
+if (!isIos) {
+    // Change class
+    $$('.view.navbar-through').removeClass('navbar-through').addClass('navbar-fixed');
+    // And move Navbar into Page
+    $$('.view .navbar').prependTo('.view .page');
+}
 
 var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
@@ -27,6 +33,8 @@ myApp.onPageInit('about', function (page) {
         createContentPage();
     });
 });
+
+
 
 // Prevents iOS devices from wandering...
 var a=document.getElementsByTagName("a");
