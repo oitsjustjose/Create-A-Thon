@@ -120,7 +120,6 @@ textarea {
   font-family: inherit;
   font-size: 20px;
   color: #616161;
-
 }
 
 .card-footer-text {
@@ -149,4 +148,8 @@ textarea {
   list-style-type: none;
   margin-left: -43px;
   margin-top: -7px;
+}
+
+.searchbar_widget {
+  width: 154px;
 }
