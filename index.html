@@ -35,6 +35,18 @@
               <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
             </div>
             <center>My Collection</center>
+
+            <!-- Search Bar -->
+            <div class="right">
+            <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+              <div class="searchbar-input">
+                <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+              </div><a href="#" class="searchbar-cancel"></a>
+            </form>
+
+            <!-- Search Bar overlay -->
+            <div class="searchbar-overlay"></div>
+          </div>
           </div>
         </div>
 
@@ -42,41 +54,53 @@
           <div data-page="index" class="page">
             <!--Actual Page Content:-->
             <div class="page-content">
-              <div class="row">
-                <div class="col-50 col-50-sp col-50 col-50-sp-sp"><center><div class="card-header card-header-text">Donatina</div><br><img src="http://shopkinsworld.com/sites/default/files/SPKDS2%20Donatina%20Characters%20Assets_0.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
-                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text">Sara Sush</div><br><img src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Sara%20Sushi%20Assets1.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
-              </div>
 
-              <div class="row">
-                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text">Tissue Box</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TISSUE-BOX.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
-                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text">Tennis Racket</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TENNIS-RACKET.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
-              </div>
+              <!-- This block will be displayed if nothing found -->
+             <div class="content-block searchbar-not-found">
+               <div class="content-block-inner">Nothing found</div>
+             </div>
 
-              <div class="row">
-                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text">Tea Pot</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TEA-POT.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
-                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text">Needs More Cowbell</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TAMBOURINE.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
-              </div>
+             <!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+             <div class="list-block list-block-search searchbar-found">
+               <ul>
 
-              <div class="row">
-                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text">Skatedoge</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__SKATEBOARD.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
-                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text">Blades of Glory</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__ROLLERBLADES.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
-              </div>
+              <li class="row item-content">
+                <div class="col-50 col-50-sp col-50 col-50-sp-sp"><center><div class="card-header card-header-text item-title">Donatina</div><br><img src="http://shopkinsworld.com/sites/default/files/SPKDS2%20Donatina%20Characters%20Assets_0.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
+                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text item-title">Sara Sush</div><br><img src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Sara%20Sushi%20Assets1.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
+              </li>
 
-              <div class="row">
-                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text">r/gaming</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__REMOTE-GAME.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
-              </div>
+              <li class="row item-content">
+                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text item-title">Tissue Box</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TISSUE-BOX.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
+                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text item-title">Tennis Racket</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TENNIS-RACKET.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
+              </li>
+
+              <li class="row item-content">
+                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text item-title">Tea Pot</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TEA-POT.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
+                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text item-title">Needs More Cowbell</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TAMBOURINE.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
+              </li>
+
+              <li class="row item-content">
+                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text item-title">Skatedoge</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__SKATEBOARD.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
+                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text item-title">Blades of Glory</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__ROLLERBLADES.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
+              </li>
+
+              <li class="row item-content">
+                <div class="col-50 col-50-sp"><center><div class="card-header card-header-text item-title">r/gaming</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__REMOTE-GAME.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></div>
+              </li>
 
             </div>
           </div>
         </div>
       </div>
     </div>
+  </ul>
+</div>
 
     <!--This stuff is all specifically for ONE pop-up-->
     <div class="popup popup-001">
       <div align=right><a href="#" class="close-popup"><img src="http://puu.sh/rsg2a/4a5f7b889f.png" width=32px height=32px margin=8px></a></div><div class="popup-title eight-px-margin_left" contentEditable=true>Donatina</div>
       <div class="popup-info eight-px-margin_left">I SHOULD PUT FEATURE INFORMATION HERE
-        <center><textarea rows="4" cols="32" placeholder="Notes.."></textarea></center>
+        <left><textarea rows="5" cols="43" placeholder="Notes.."></textarea></left>
       </div>
       <div class="list-block">
         <ul>

@@ -40,61 +40,84 @@
               <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
             </div>
             <center>Browse Shopkins</center>
+
+            <!-- Search Bar -->
+            <div class="right">
+            <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+              <div class="searchbar-input">
+                <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+              </div><a href="#" class="searchbar-cancel"></a>
+            </form>
+
+            <!-- Search Bar overlay -->
+            <div class="searchbar-overlay"></div>
+          </div>
           </div>
         </div>
+
         <div class="pages navbar-through toolbar-through page_with_content">
           <div data-page="index" class="page">
             <!--Actual Page Content:-->
             <div class="page-content">
-                <div class="feature">
+
+              <!-- This block will be displayed if nothing found -->
+              <div class="content-block searchbar-not-found">
+                <div class="content-block-inner">Nothing found</div>
+              </div>
+
+              <!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+              <div class="list-block list-block-search searchbar-found">
+                <ul>
+                <li class="iteam-content">
                 <img class="feature-image" src="http://shopkinsworld.com/sites/default/files/SPKDS2%20Donatina%20Characters%20Assets_0.png"></img>
                 <div class="feature-info">
-                  <div class="feature-title">Pam Cake</div>
+                  <div class="feature-title item-title">Donatina</div>
                   <div class="feature-desc">
                     Life is "hole" lot of fun for Donatina! With her head in the clouds, she's a "Happy-Dough-Lucky" kinda girl who samples more donuts than she sells! As sweet as pink frosting, she's always 'round to help her friends! <br><br>
                     <a href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=shopkins+Donatina&rh=i%3Aaps%2Ck%3Ashopkins+Donatina" class="external" target="_blank">Buy One Here!</a>
                   </div>
-                </div>
+                </li>
 
-                <div class="feature">
+                <li class="iteam-content">
                 <img class="feature-image" src="http://shopkinsworld.com/sites/default/files/SPKDS2-W3%20Pam%20Cake%20Assets_1.png"></img>
                 <div class="feature-info">
-                  <div class="feature-title">Pam Cake</div>
+                  <div class="feature-title item-title">Pam Cake</div>
                   <div class="feature-desc">
                     A berry early riser, Pam Cake is as chirpy as the birds she wakes up with. She hits the stores before the shops open their doors and flips out when she knows she's the first of her friends with the latest fashion! Always helpful but very competitive, her energy levels are switched to "Berry High!" Which is a good thing because she's flat out 24/7. <br><br>
                     <a href="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=shopkins+Pam+Cake&rh=i%3Aaps%2Ck%3Ashopkins+Pam+Cake" class="external" target="_blank">Buy One Here!</a>
                   </div>
-                </div>
+                </li>
 
-                <div class="feature">
+                <li class="iteam-content">
                 <img class="feature-image" src="http://shopkinsworld.com/sites/default/files/SPKDS2%20Characters%20Peppa-Mint%20Assets.png"></img>
                 <div class="feature-info">
-                  <div class="feature-title">Peppa Mint</div>
+                  <div class="feature-title item-title">Peppa Mint</div>
                   <div class="feature-desc">
                     She may look chilled but Peppa-Mint is always having Meltdowns! Maybe because she keeps losing her cool because she's so warm hearted! Shy and a little syrupy, she sticks close to her friends and loves getting the scoop on all the gossip in Shopville! <br><br>
                     <a href="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=shopkins+Peppa+Mint&rh=i%3Aaps%2Ck%3Ashopkins+Peppa+Mint" class="external" target="_blank">Buy One Here!</a>
                   </div>
-                </div>
+                </li>
 
-                <div class="feature">
-                <img class="feature-image" src="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=shopkins+Rainbow+Cake"></img>
+                <li class="iteam-content">
+                <img class="feature-image" src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Rainbow%20Kate%20Assets1.png"></img>
                 <div class="feature-info">
-                  <div class="feature-title">Rainbow Cake</div>
+                  <div class="feature-title item-title">Rainbow Cake</div>
                   <div class="feature-desc">
                     Being brilliant is a piece of cake for this Shoppie! Full of fun and always on the go, nothing is ever done slow! Her friends never feel down when she's around because she brightens up the gloomiest day! And how do her Besties find her when she's out shopping? Easy, they just look up and follow the rainbow! <br><br>
-                    <a href="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Rainbow%20Kate%20Assets1.png" class="external" target="_blank">Buy One Here!</a>
+                    <a href="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=shopkins+Rainbow+Cake" class="external" target="_blank">Buy One Here!</a>
                   </div>
-                </div>
+                </li>
 
-                <div class="feature">
+
+                <li class="iteam-content">
                 <img class="feature-image" src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Sara%20Sushi%20Assets1.png"></img>
                 <div class="feature-info">
-                  <div class="feature-title">Sara Sushi</div>
+                  <div class="feature-title item-title">Sara Sushi</div>
                   <div class="feature-desc">
                     Peaceful, calm and never alarmed, Sara Sushi is always in "tuna" with her inner self! But when things don't go to plan she goes off the rails like an out of control sushi train! However, after a few deep breaths she's back on track and ready to chill with her friends at her favorite sushi shop! <br><br>
                     <a href="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=shopkins+Sara+Sushi&rh=i%3Aaps%2Ck%3Ashopkins+Sara+Sushi" class="external" target="_blank">Buy One Here!</a>
                   </div>
-                </div>
+                </li>
 
               </div>
             </div>
@@ -102,6 +125,9 @@
         </div>
       </div>
     </div>
+  </ul>
+</div>
+
     <script src="js/framework7.min.js"></script>
     <script>
       (function () {
