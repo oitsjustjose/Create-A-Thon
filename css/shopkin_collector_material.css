@@ -130,6 +130,24 @@ textarea {
   border-radius: 2px;
 }
 
-.searchbar{
+.searchbar {
   margin-right: 7px;
+}
+
+.search_not_found {
+  text-align: center;
+  font-family: inherit;
+  font-size: 20px;
+}
+
+.list-custom {
+  list-style-type: none;
+  margin-left: -40px;
+  margin-top: -2px;
+}
+
+.list-all-custom {
+  list-style-type: none;
+  margin-left: -36px;
+  margin-top: -7px;
 }
