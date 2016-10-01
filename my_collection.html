@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" type="image/png" href="http://puu.sh/rmBIY/b081e97590.png">
+    <link rel="apple-touch-icon" href="http://puu.sh/rriyR/ab8b4e23a3.png">
+    <title>Shopkin Collector</title>
+  </head>
+
+  <body>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <!--This is where the sidebar buttons are handled-->
+        <a href="my_collection.html" class="button button-raised button-fill color-pink external">My Collection</a>
+        <a href="my_wishlist.html" class="button button-raised button-fill color-pink external">My Wishlist</a>
+        <a href="browse_all.html" class="button button-raised button-fill color-pink external">Browse Shopkins</a>
+        <a href="index.html" class="button button-raised button-fill external">Log Out</a>
+      <!--
+        <a href="#" class="button button-raised button-fill color-pink external">My Friends</a>
+        <a href="#" class="button button-raised button-fill color-pink external">Compete!</a>
+        <a href="#" class="button button-raised button-fill color-pink external">Leaderboard</a>
+      -->
+      </div>
+    </div>
+
+  <div class="views">
+    <div class="view view-main navbar-through">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="left">
+            <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+          </div>
+          <center>My Collection</center>
+
+          <!--Search Bar-->
+          <div class="right searchbar_widget">
+            <form data-search-list=".pages" data-search-in=".item-title" class="searchbar searchbar-init">
+              <div class="searchbar-input"><input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a></div>
+              <a href="#" class="searchbar-cancel"></a>
+            </form>
+          </div>
+        </div>
+      </div>
+
+        <div class="pages navbar-through toolbar-through page_with_content">
+          <div data-page="index" class="page">
+            <!--Actual Page Content:-->
+            <div class="page-content">
+              <!-- This block will be displayed if nothing found -->
+             <div class="content-block searchbar-not-found">
+               <div class="content-block-inner search_not_found">Nothing found</div>
+             </div>
+
+             <!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+             <div class="list-block-search searchbar-found">
+               <ul class="list-custom">
+
+                <div class="row">
+                  <li class="col-50 col-50-sp item-content"><center><div class="card-header card-header-text item-title">Donatina</div><br><img src="http://shopkinsworld.com/sites/default/files/SPKDS2%20Donatina%20Characters%20Assets_0.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></li>
+                  <li class="col-50 col-50-sp item-content"><center><div class="card-header card-header-text item-title">Sara Sushi</div><br><img src="http://shopkinsworld.com/sites/default/files/SPKDS2-W2%20Sara%20Sushi%20Assets1.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></li>
+                </div>
+
+                <div class="row">
+                  <li class="col-50 col-50-sp item-content"><center><div class="card-header card-header-text item-title">Tissue Box</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TISSUE-BOX.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></li>
+                  <li class="col-50 col-50-sp item-content"><center><div class="card-header card-header-text item-title">Tennis Racket</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TENNIS-RACKET.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></li>
+                </div>
+
+                <div class="row">
+                  <li class="col-50 col-50-sp item-content"><center><div class="card-header card-header-text item-title">Tea Pot</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TEA-POT.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></li>
+                  <li class="col-50 col-50-sp item-content"><center><div class="card-header card-header-text item-title">Needs More Cowbell</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__TAMBOURINE.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></li>
+                </div>
+
+                <div class="row">
+                  <li class="col-50 col-50-sp item-content"><center><div class="card-header card-header-text item-title">Skatedoge</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__SKATEBOARD.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></li>
+                  <li class="col-50 col-50-sp item-content"><center><div class="card-header card-header-text item-title">Blades of Glory</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__ROLLERBLADES.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></li>
+                </div>
+
+                <div class="row">
+                  <li class="col-50 col-50-sp item-content"><center><div class="card-header card-header-text item-title">r/gaming</div><br><img src="http://shopkinsworld.com/sites/default/files/104804M_SPKS5_Characters__REMOTE-GAME.png"></center><div class="card-footer-text" align="right" margin-right="16px"><a href="#" data-popup=".popup-001" class="open-popup">Details</a></div></li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--This stuff is all specifically for ONE pop-up-->
+    <div class="popup popup-001">
+      <div align=right><a href="#" class="close-popup"><img src="http://puu.sh/rsg2a/4a5f7b889f.png" width=32px height=32px margin=8px></a></div><div class="popup-title eight-px-margin_left" contentEditable=true>Donatina</div>
+      <div class="popup-info eight-px-margin_left">I SHOULD PUT FEATURE INFORMATION HERE
+        <left><textarea rows="5" cols="33" placeholder="Notes.."></textarea></left>
+      </div>
+      <div class="list-block">
+        <ul>
+          <li><label class="label-radio item-content"><input type="radio" name="have_status_001" value="Have"><div class="item-media"><i class="icon icon-form-radio"></i></div><div class="item-inner"><div class="item-title">I Have One</div></div></label></li>
+          <li><label class="label-radio item-content"><input type="radio" name="have_status_001" value="Want"><div class="item-media"><i class="icon icon-form-radio"></i></div><div class="item-inner"><div class="item-title">I Want One</div></div></label></li>
+          <li><label class="label-radio item-content"><input type="radio" name="have_status_001" value="Neither" checked="checked"><div class="item-media"><i class="icon icon-form-radio"></i></div><div class="item-inner"><div class="item-title">Neither</div></div></label></li>
+        </ul>
+      </div>
+    </div>
+
+    <!--This stuff is used specifically to load the proper CSS file depending on the device-->
+    <script src="js/framework7.min.js"></script>
+    <script>
+      (function () {
+        if (Framework7.prototype.device.ios) {
+              Dom7('head').append(
+                '<link rel="stylesheet" href="css/framework7.ios.min.css">' +
+                '<link rel="stylesheet" href="css/framework7.ios.colors.min.css">' +
+                '<link rel="stylesheet" href="css/shopkin_collector_ios.css">'
+              );
+          }
+          else {
+              Dom7('head').append(
+                '<link rel="stylesheet" href="css/framework7.material.min.css">' +
+                '<link rel="stylesheet" href="css/framework7.material.colors.min.css">' +
+                '<link rel="stylesheet" href="css/shopkin_collector_material.css">'
+              );
+          }
+      })();
+    </script>
+    <script src="js/my-app.js"></script>
+  </body>
+</html>
