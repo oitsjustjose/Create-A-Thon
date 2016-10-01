@@ -154,3 +154,7 @@ textarea {
   width: 154px;
   margin-right: -15px;
 }
+
+.login-icon {
+  margin-left: 2px;
+}
