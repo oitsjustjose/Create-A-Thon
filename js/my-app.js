@@ -1,12 +1,28 @@
+var isAndroid = Framework7.prototype.device.android === true;
+var isIos = Framework7.prototype.device.ios === true;
+
+Template7.global = {
+    android: isAndroid,
+    ios: isIos
+};
+
 // Initialize your app
-var myApp = new Framework7();
+var myApp = new Framework7({
+    material: isAndroid ? true : false,
+    template7Pages: true
+});
 
 // Export selectors engine
 var $$ = Dom7;
 
-// Add view
+if (!isIos) {
+    // Change class
+    $$('.view.navbar-through').removeClass('navbar-through').addClass('navbar-fixed');
+    // And move Navbar into Page
+    $$('.view .navbar').prependTo('.view .page');
+}
+
 var mainView = myApp.addView('.view-main', {
-    // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true
 });
 
@@ -17,6 +33,19 @@ myApp.onPageInit('about', function (page) {
         createContentPage();
     });
 });
+
+
+
+// Prevents iOS devices from wandering...
+var a=document.getElementsByTagName("a");
+for(var i=0;i<a.length;i++)
+{
+    a[i].onclick=function()
+    {
+        window.location=this.getAttribute("href");
+        return false
+    }
+}
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
