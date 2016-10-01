@@ -1,13 +1,12 @@
-.col-auto {
-  background: #FFF;
+div[class*="col-"] {
   text-align: center;
-  color: #000;
-  border: 1px solid #ddd;
+  padding: 5px;
+  height: 100%
+  display: block;
+  margin-top: 10%;
 }
-
-.row  {
-  margin-bottom: 10px;
-  margin: 12px;
+.row {
+  margin-bottom: 15px;
 }
 
 .center {
@@ -98,7 +97,6 @@ img {
 .col-auto {
   border-color: #E91E63;
   border-width: 2px;
-  background-color: #FFFFFF;
   max-width: 384px;
   max-height: 384px;
 }
@@ -117,24 +115,35 @@ textarea {
   margin-top: 56px;
 }
 
-.demo-card-header-pic .card-header {
+.demo-card-header-pic .card-header{
   height: 20vw;
-  width:  24vw;
   max-height: 20vw;
-  max-width: 24vw;
+  width: auto\9;
+  max-width: inherit;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .color-gray {
-  font-size: 24px;
+  font-size: 1.8vw;
   text-align: center;
 }
 
 p {
   margin-top: 10px;
 	vertical-align: top;
-	width: 350px;
-	font-size: 18px;
+}
+
+.card-content-text {
+  font-size: 1.3vw;
+}
+
+.card, .card-content , .card-content-inner, .card-footer, .card-header {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto\9;
+  padding-right: 16px;
+  margin: 12px;
 }
