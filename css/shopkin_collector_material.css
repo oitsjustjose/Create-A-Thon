@@ -6,7 +6,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
 }
 
-.row  {
+.row {
   margin: 7px;
 }
 
@@ -120,7 +120,6 @@ textarea {
   font-family: inherit;
   font-size: 20px;
   color: #616161;
-
 }
 
 .card-footer-text {
@@ -149,4 +148,8 @@ textarea {
   list-style-type: none;
   margin-left: -43px;
   margin-top: -7px;
+}
+
+.searchbar_widget {
+  width: 154px;
 }
