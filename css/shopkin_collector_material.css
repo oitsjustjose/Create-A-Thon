@@ -1,4 +1,4 @@
-.col-auto {
+.col-50 {
   background: #fff;
   position: relative;
   border-radius: 2px;
@@ -119,12 +119,13 @@ textarea {
 
 .card-header-text {
   font-family: inherit;
-  font-size: 24px;
+  font-size: 20px;
   color: #616161;
+
 }
 
 .card-footer-text {
-  font-size: 18px;
+  font-size: 14px;
   margin-right: 8px;
   border-radius: 2px;
 }
