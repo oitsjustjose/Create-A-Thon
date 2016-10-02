@@ -1,7 +1,6 @@
-<!--Using framework7 -->
 <!DOCTYPE html>
 <html>
-  <!--This is all just header stuff - it doesn't really apply anything to the webpage's content itself except the Tab Title-->
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -12,99 +11,51 @@
     <title>Shopkin Collector</title>
   </head>
 
-
-  <!--This is the actual window-->
   <body>
-    <div class="statusbar-overlay"></div>
-    <div class="panel-overlay"></div>
-    <div class="panel panel-left panel-reveal">
-      <div class="content-block">
-        <!--This is where the sidebar buttons are handled-->
-        <a href="my_collection.html" class="button button-raised button-fill color-pink external">My Collection</a>
-        <a href="my_wishlist.html" class="button button-raised button-fill color-pink external">My Wishlist</a>
-        <a href="browse_all.html" class="button button-raised button-fill color-pink external">Browse Shopkins</a>
-        <a href="friends.html" class="button button-raised button-fill color-pink external">View Friends</a>
-        <a href="matchkins_game.html" class="button button-raised button-fill color-pink external">Play Matchkins</a>
-        <a href="index.html" class="button button-raised button-fill color-indigo external">Log Out</a>
-      </div>
-    </div>
-
-    <!--Navbar / Top Bar Content:-->
+    <!-- Should be a direct child of BODY -->
     <div class="views">
-      <div class="view view-main navbar-through">
-
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="left">
-              <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
-            </div>
-            <center>View and Add Friends</center>
-          </div>
-        </div>
-
-        <div class="pages navbar-through toolbar-through page_with_content">
-          <div data-page="index" class="page">
-            <!--Actual Page Content:-->
-            <div class="page-content">
-              <div class="card_background">
-                <div class="card_info">Add a friend using their e-mail address</div><br>
-                <form>
-                  <div class="list-block">
-                    <ul>
-                      <li class="item-content">
-
-                        <div class="item-inner">
-                          <!-- <div class="item-media"><i class="icon icon-form-email login-icon"></i></div> -->
-                          
-                            <div class="email_label">Email</div>
-                          <div class="item-input">
-                            <left><input type="text" name="email" placeholder="example@email.com" class="input_email"></left>
-                          </div>
-                        </div>
-
-                      </li>
-                      <br>  <input type="submit" value="Add Friend" class="search_email_button button button-raised button-fill color-cyan external"><br>
-                    </ul>
-                    <br><br><br><br><br><br><br>
-                    <!--This area to be used for results..-->
-                  </div>
-                </form>
-              </div>
-
-<!--
+        <!-- Default view-page layout -->
+        <div class="view-main">
+          <div class="page">
+            <!-- page-content has additional login-screen content -->
+                <div class="page-content login-screen-content">
+              <div class="friend-screen-title">Add a friend using their e-mail address</div>
+              <!-- Login form -->
               <form>
                 <div class="list-block">
                   <ul>
                     <li class="item-content">
                       <div class="item-inner">
                         <div class="item-media"><i class="icon icon-form-email login-icon"></i></div>
-                          <div class="irem-title label">E-mail</div>
+                        <div class="item-title label">E-mail</div>
                         <div class="item-input">
-                          <input type="text" name="email" placeholder="example@email.com" class="input_email">
+                          <input type="text" name="email" placeholder="example@email.com">
                         </div>
                       </div>
                     </li>
-                      <li class="content-block">
-                        <center><input type="submit" value="Add Friend" class="search_email_button button button-raised button-fill color-cyan external"></center>
-                        <br>
-                      </div>
-                    </li>
                   </ul>
-                  <br><br><br><br><br><br> -->
-
-
-              <div class="card_background">
-                <div class="card_info with_seperator">Your friends</div>
-                <br><br><br>
-                <div class="card_info">JOKE'S ON YOU, I DON'T HAVE ANY FRIENDS</div>
-                <br><br><br>
+                </div>
+                <div class="content-block">
+                  <div class="row">
+                      <div class="col-100"><a href="" class="button button-raised button-fill color-cyan external"><center>Submit</center></a>
+                      </div>
+                  </div>
               </div>
+              <br><br><br><br><br><br><br>
+                    <!--This area to be used for results..-->
+                    <div class="card_background">
+                      <div class="card_info with_seperator">Your friends</div>
+                        <br><br><br>
+                        <div class="card_info">JOKE'S ON YOU, I DON'T HAVE ANY FRIENDS</div>
+                      <br><br><br><br><br><br>
+                    </div>
+                </form>
+                  </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
-
+<!--This stuff is used specifically to load the proper CSS file depending on the device-->
     <script src="js/framework7.min.js"></script>
     <script>
       (function () {

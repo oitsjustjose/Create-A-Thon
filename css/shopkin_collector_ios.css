@@ -207,3 +207,9 @@ textarea {
   border-color: #E1E1E1;
   padding-bottom: 8px;
 }
+
+friend-screen-title{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
