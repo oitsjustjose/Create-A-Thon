@@ -57,9 +57,31 @@ public class MainActivity extends Activity
         });
         webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setDatabaseEnabled(true);
-        webView.loadUrl("http://oitsjustjose.github.io/Brogrammers/");
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webView.requestFocus(View.FOCUS_DOWN);
+        if (savedInstanceState != null)
+        {
+            ((WebView)findViewById(R.id.webView1)).restoreState(savedInstanceState);
+        }
+        else
+        {
+            webView.loadUrl("http://oitsjustjose.github.io/Brogrammers/");
+        }
+
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState )
+    {
+        super.onSaveInstanceState(outState);
+        webView.saveState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        webView.restoreState(savedInstanceState);
     }
 
     @Override

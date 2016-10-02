@@ -1,5 +1,7 @@
 (function(){
 
+	'use strict';
+
 	var Memory = {
 
 		init: function(cards){
