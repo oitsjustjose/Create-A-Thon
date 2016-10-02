@@ -183,16 +183,17 @@ textarea {
 }
 
 .search_email_button {
-  width: 200px;
-  max-width: 200px;
+  width: 500px;
+  max-width: 500px;
 }
 
 .input_email {
-  max-width: auto;
+  width: 500px;
+  max-width: 500px;
 }
 
 .email_label {
-  max-width: auto;
+  max-width: 500;
   width: 128px;
 }
 
