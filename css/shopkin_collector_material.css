@@ -162,7 +162,7 @@ textarea {
 .card_background {
   width: auto;
   height: auto;
-  max-width: 30%;
+  max-width: auto;
   max-height: 100%;
   margin-left: 8px;
   margin-right: 8px;
@@ -183,8 +183,8 @@ textarea {
 }
 
 .search_email_button {
-  width: 500px;
-  max-width: 500px;
+  width: auto;
+  max-width: auto:;
 }
 
 /*.input_email {
@@ -193,7 +193,7 @@ textarea {
 }*/
 
 .email_label {
-  max-width: 500;
+  max-width: 500px;
   width: 128px;
 }
 
