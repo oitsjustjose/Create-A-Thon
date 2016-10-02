@@ -65,7 +65,7 @@ public class MainActivity extends Activity
         }
         else
         {
-            webView.loadUrl("http://oitsjustjose.github.io/Brogrammers/");
+            webView.loadUrl("https://brogrammers-144401.appspot.com/");
         }
 
     }

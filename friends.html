@@ -1,7 +1,6 @@
-<!--Using framework7 -->
 <!DOCTYPE html>
 <html>
-  <!--This is all just header stuff - it doesn't really apply anything to the webpage's content itself except the Tab Title-->
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -11,10 +10,7 @@
     <link rel="apple-touch-icon" href="http://puu.sh/rriyR/ab8b4e23a3.png">
     <title>Shopkin Collector</title>
   </head>
-
-
   <!--This is the actual window-->
-  <body>
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay"></div>
     <div class="panel panel-left panel-reveal">
@@ -30,56 +26,60 @@
     </div>
 
     <!--Navbar / Top Bar Content:-->
-    <div class="views">
-      <div class="view view-main navbar-through">
+       <div class="views">
+         <div class="view view-main navbar-through">
 
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="left">
-              <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+           <div class="navbar">
+             <div class="navbar-inner">
+               <div class="left">
+                 <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+               </div>
+               <center>View and Add Friends</center>
+             </div>
+           </div>
+
+           <div class="pages navbar-through toolbar-through page_with_content">
+              <div data-page="index" class="page">
+            <!-- page-content has additional Friend-screen content -->
+                <div class="page-content login-screen-content">
+                  <div class="friend-screen-title">
+              <center><element "boldText">Add a friend using their E-mail address</element></center>
             </div>
-            <center>View and Add Friends</center>
-          </div>
-        </div>
-
-        <div class="pages navbar-through toolbar-through page_with_content">
-          <div data-page="index" class="page">
-            <!--Actual Page Content:-->
-            <div class="page-content">
-              <div class="card_background">
-                <div class="card_info">Add a friend using their e-mail address</div>
-                <form>
-                  <div class="list-block">
-                    <ul>
-                      <li class="item-content">
-                        <div class="item-inner">
-                          <div class="item-media"><i class="icon icon-form-email login-icon"></i></div>
-                            <div class="email_label">E-mail</div>
-                          <div class="item-input">
-                            <input type="text" name="email" placeholder="example@email.com" class="input_email">
-                          </div>
-                          <input type="submit" value="Add Friend" class="search_email_button button button-raised button-fill color-cyan external">
+              <!-- Login form -->
+              <form>
+                <div class="list-block">
+                  <ul>
+                    <li class="item-content">
+                      <div class="item-inner">
+                        <!-- <div class="item-media"><i class="icon icon-form-email login-icon friend-icon"></i></div> -->
+                        <div class="item-title label friend-label">E-mail</div>
+                        <div class="item-input friend-E-mail">
+                          <input type="text" name="email" placeholder="example@email.com">
                         </div>
-                      </li>
-                    </ul>
-                    <br><br><br><br><br><br><br><br><br><br><br><br>
-                    <!--This area to be used for results..-->
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content-block">
+                  <div class="row">
+                      <div class="col-100"><a href="" class="button button-raised button-fill color-cyan external"><center>Search</center></a>
+                      </div>
                   </div>
+              </div>
+              <br><br><br><br><br><br><br>
+                    <!--This area to be used for results..-->
+                    <div class="card_background">
+                      <div class="card_info with_seperator">Your friends</div>
+                        <br><br><br>
+                        <div class="card_info">JOKE'S ON YOU, I DON'T HAVE ANY FRIENDS</div>
+                      <br><br><br><br><br><br>
+                    </div>
                 </form>
-              </div>
-
-              <div class="card_background">
-                <div class="card_info with_seperator">Your friends</div>
-                <br><br><br>
-                <div class="card_info">JOKE'S ON YOU, I DON'T HAVE ANY FRIENDS</div>
-                <br><br><br>
-              </div>
+                  </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
+<!--This stuff is used specifically to load the proper CSS file depending on the device-->
     <script src="js/framework7.min.js"></script>
     <script>
       (function () {
