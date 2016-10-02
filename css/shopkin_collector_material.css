@@ -203,7 +203,10 @@ textarea {
   padding-bottom: 8px;
 }
 
+
 .friend-screen-title{
-  font-size: 22px;
-  margin-top: 69px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 35px;
+  border-bottom: 1px #ccc solid;
 }
