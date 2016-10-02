@@ -187,14 +187,13 @@ textarea {
   max-width: 500px;
 }
 
-/*.input_email {
-  width: 500px;
-  max-width: 500px;
-}*/
+.input_email {
+  width:160px;
+  max-width: 160px;
+}
 
 .email_label {
-  max-width: 500px;
-  width: 128px;
+  margin-right: 8px;
 }
 
 .with_seperator {
