@@ -1,0 +1,49 @@
+
+{{template "header"}}
+
+<!-- Should be a direct child of BODY -->
+  <div class="views">
+      <!-- Default view-page layout -->
+      <div class="view-main">
+        <div class="page">
+          <!-- page-content has additional login-screen content -->
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Shopkin Collector Login</div>
+            <!-- Login form -->
+            <form method="POST" action="/api/login">
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-media"><i class="icon icon-form-email login-icon"></i></div>
+                      <div class="item-title label">E-mail</div>
+                      <div class="item-input">
+                        <input type="text" name="email" placeholder="example@email.com">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-media"><i class="icon icon-form-password login-icon"></i></div>
+                      <div class="item-title label">Password</div>
+                      <div class="item-input">
+                        <input type="password" name="password" placeholder="Enter Your Password">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="content-block">
+                    <div class="row">
+                        <div class="col-100"><center><button class="button button-raised button-fill color-cyan external">Sign In</button></center>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-50"><a href="/form/signup" class="button button-raised button-fill color-cyan ripple-yellow external"><center>Register</center></a></div>
+                      <div class="col-50"><a href="notImplemented.html" class="button button-raised button-fill color-cyan ripple-yellow external"><center>Forgot Password?</center></a></div>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </div>
+  </div>
+{{template "footer"}}

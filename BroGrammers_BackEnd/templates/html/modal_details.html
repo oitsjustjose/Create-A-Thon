@@ -1,0 +1,39 @@
+{{ define "modal-tweet"}}
+<div class="popup popup-001">
+  <div align=right><a href="#" class="close-popup"><img src="http://puu.sh/rsg2a/4a5f7b889f.png" width=32px height=32px margin=8px></a></div><div class="popup-title eight-px-margin_left" contentEditable=true>Donatina</div>
+  <div class="popup-info eight-px-margin_left"> {{.}}
+    <left><textarea rows="5" cols="33" placeholder="Notes.."></textarea></left>
+  </div>
+  <div class="list-block">
+    <ul>
+      <li><label class="label-radio item-content"><input type="radio" name="have_status_001" value="Have"><div class="item-media"><i class="icon icon-form-radio"></i></div><div class="item-inner"><div class="item-title">I Have One</div></div></label></li>
+      <li><label class="label-radio item-content"><input type="radio" name="have_status_001" value="Want"><div class="item-media"><i class="icon icon-form-radio"></i></div><div class="item-inner"><div class="item-title">I Want One</div></div></label></li>
+      <li><label class="label-radio item-content"><input type="radio" name="have_status_001" value="Neither" checked="checked"><div class="item-media"><i class="icon icon-form-radio"></i></div><div class="item-inner"><div class="item-title">Neither</div></div></label></li>
+    </ul>
+  </div>
+</div>
+<script>
+//    Validate passwords
+//    listen for submit button click
+  document.getElementById("btnTest").addEventListener("click", function(){
+  pErr.textContext = 'Clicked';
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/api/userAddItem');
+  xhr.send(5197666342404096);
+  xhr.addEventListener('readystatechange', function(){
+      if (xhr.readyState === 4) {
+          var item = xhr.responseText;
+          console.log(item);
+          if (item == 'true') {
+              btnTest.textContent = "Added";
+              btnTest.id = "btnTested"
+          } else {
+              pErr.textContent = '';
+          }
+      }
+  });
+
+});
+</script>
+
+{{end}}

@@ -1,0 +1,142 @@
+{{template "header"}}
+<body>
+  <!-- Should be a direct child of BODY -->
+  <div class="views">
+      <!-- Default view-page layout -->
+      <div class="view-main">
+        <div class="page">
+          <!-- page-content has additional login-screen content -->
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Create User Account</div>
+            <!-- create user form -->
+            <form method="POST" action="/api/createuser" id="form-create-user">
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-title label">First Name</div>
+                      <div class="item-input">
+                        <input id="firstName" type="text" name="firstname" placeholder="First Name">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-title label">Last Name</div>
+                      <div class="item-input">
+                        <input id="lastName" type="text" name="lastname" placeholder="Last Name">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-title label">E-mail</div>
+                      <div class="item-input">
+                        <input id="email" type="email" name="email" placeholder="example@email.com">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-title label">Username</div>
+                      <div class="item-input">
+                        <input id="username" type="text" name="username" placeholder="example@email.com">
+                      </div>
+                    </div>
+                  </li>
+                  <li class= "item-content">
+                    <div class="item-inner">
+                      <div class="item-media"><i class="icon icon-form-password"></i></div>
+                      <div class="item-title label">Password</div>
+                      <div class="item-input">
+                        <input id="password" type="password" name="password" placeholder="Create New Password">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                     <div class="item-media"><i class="icon icon-form-password"></i></div>
+                      <div class="item-title label">Confirm</div>
+                      <div class="item-input">
+                        <input id="passwordConfirm" type="password" name="confirm" placeholder="Confirm Password">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <p id="formError"></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block">
+                <center>
+                  <button id="btnCreateAccount" class="button button-raised button-fill color-cyan external"> Create Account </button>
+                </center>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+  </div>
+<script>
+    var formUser = document.querySelector('#form-create-user');
+    var email = document.querySelector('#email');
+    var userName = document.querySelector('#username')
+    var p1 = document.querySelector('#password');
+    var p2 = document.querySelector('#passwordConfirm');
+    var btnSubmit = document.querySelector('#btnCreateAccount');
+
+    var pErr = document.querySelector('#formError');
+
+    //    email must be unique
+    userName.addEventListener('input', function(){
+        console.log(userName.value);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/api/checkUserName');
+        xhr.send(userName.value);
+        xhr.addEventListener('readystatechange', function(){
+            if (xhr.readyState === 4) {
+                var item = xhr.responseText;
+                console.log(item);
+                if (item == 'true') {
+                    pErr.textContent = 'User name already registered.';
+                } else {
+                    pErr.textContent = '';
+                }
+            }
+        });
+    });
+
+    //    Validate passwords
+    //    listen for submit button click
+    formUser.addEventListener('submit', function(e){
+
+        var ok = validatePasswords();
+        if (!ok) {
+            e.preventDefault();
+            return;
+        }
+    });
+
+    function validatePasswords() {
+        pErr.textContent = '';
+        if (p1.value === '') {
+            pErr.textContent = 'Enter a password.';
+            return false;
+        }
+        if (p1.value !== p2.value) {
+            pErr.textContent = 'Your passwords did not match. Please re-enter your passwords.';
+            p1.value = '';
+            p2.value = '';
+            return false;
+        }
+        return true;
+    };
+</script>
+{{template "footer"}}

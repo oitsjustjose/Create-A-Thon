@@ -1,0 +1,54 @@
+{{template "header"}}
+{{template "header2" .}}
+
+  <!--This is the actual window-->
+  <!--change class="theme-bluegray" to something else if you want-->
+  <div class="views">
+    <div class="view view-main navbar-through">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="left">
+            <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+          </div>
+          <center>{{.UserName}}'s Collection</center>
+
+
+          <!--Search Bar-->
+          <div class="right searchbar_widget">
+            <form data-search-list=".pages" data-search-in=".item-title" class="searchbar searchbar-init">
+              <div class="searchbar-input"><input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a></div>
+              <a href="#" class="searchbar-cancel"></a>
+            </form>
+          </div>
+        </div>
+      </div>
+
+        <div class="pages navbar-through toolbar-through page_with_content">
+          <div data-page="index" class="page">
+            <!--Actual Page Content:-->
+            <div class="page-content">
+              <!-- This block will be displayed if nothing found -->
+             <div class="content-block searchbar-not-found">
+               <div class="content-block-inner search_not_found">Nothing found</div>
+             </div>
+
+             <!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+             <div class="list-block-search searchbar-found">
+               <ul class="list-custom">
+                 {{range .Items}}
+                  <div class="row">
+                    <li class="col-100 col-50-sp item-content"><center><div class="card-header card-header-text item-title">{{.Title}}</div><br><img src="{{.ImageURL}}"></center></li>
+                  </div>
+                  {{end}}
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!--This stuff is all specifically for ONE pop-up-->
+
+{{template "footer"}}

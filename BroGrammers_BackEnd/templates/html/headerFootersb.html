@@ -1,0 +1,58 @@
+<!--Using framework7 -->
+{{define "header"}}<!DOCTYPE html>
+<html lang="en">
+  <!--This is all just header stuff - it doesn't really apply anything to the webpage's content itself except the Tab Title-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" type="image/png" href="http://puu.sh/rmBIY/b081e97590.png">
+    <link rel="apple-touch-icon" href="http://puu.sh/rriyR/ab8b4e23a3.png">
+    <title>Shopkin Collector</title>
+  </head>
+  <body>{{end}}
+{{define "header2"}}
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <!--This is where the sidebar buttons are handled-->
+        <a href="/" class="button button-raised button-fill color-pink external">My Collection</a>
+        <a href="/user/wishlist" class="button button-raised button-fill color-pink external">My Wishlist</a>
+        <a href="/user/friends" class="button button-raised button-fill color-pink external">View Friends</a>
+        <a href="/items" class="button button-raised button-fill color-pink external">Browse Shopkins</a>
+        <a href="/matchkins" class="button button-raised button-fill color-pink external">Matchkins</a>
+        {{if .LoggedIn}}
+          <a href="/api/logout" class="button button-raised button-fill external">Log Out</a>
+        {{end}}
+      <!--
+        <a href="#" class="button button-raised button-fill color-pink external">My Friends</a>
+        <a href="#" class="button button-raised button-fill color-pink external">Compete!</a>
+        <a href="#" class="button button-raised button-fill color-pink external">Leaderboard</a>
+      -->
+      </div>
+    </div>{{end}}
+
+{{ define "footer" }}<script src="/public/js/framework7.min.js"></script>
+    <script>
+      (function () {
+        if (Framework7.prototype.device.ios) {
+              Dom7('head').append(
+                '<link rel="stylesheet" href="/public/css/framework7.ios.min.css">' +
+                '<link rel="stylesheet" href="/public/css/framework7.ios.colors.min.css">' +
+                '<link rel="stylesheet" href="/public/css/shopkin_collector_ios.css">'
+              );
+          }
+          else {
+              Dom7('head').append(
+                '<link rel="stylesheet" href="/public/css/framework7.material.min.css">' +
+                '<link rel="stylesheet" href="/public/css/framework7.material.colors.min.css">' +
+                '<link rel="stylesheet" href="/public/css/shopkin_collector_material.css">'
+              );
+          }
+      })();
+    </script>
+    <script src="/public/js/my-app.js"></script>
+</body>
+</html>{{ end }}

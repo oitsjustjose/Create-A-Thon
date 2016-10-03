@@ -1,0 +1,40 @@
+{{template "header"}}
+<body>
+  <p> {{.LoggedIn}}</p>
+  <p> {{.Email}}</p>
+  <p> {{.FirstName}}</p>
+  <p> {{.LastName}}</p>
+  <p> {{.UserName}}</p>
+  <p id="pErr"></p>
+
+  <div class="content-block">
+
+    <center>
+      <button id="btnTest" class="button button-raised button-fill color-cyan external"> Create Account </button>
+    </center>
+  </div>
+</form>
+<script>
+  //    Validate passwords
+  //    listen for submit button click
+    document.getElementById("btnTest").addEventListener("click", function(){
+    pErr.textContext = 'Clicked';
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/userAddItem');
+    xhr.send(5584144679567360);
+    xhr.addEventListener('readystatechange', function(){
+        if (xhr.readyState === 4) {
+            var item = xhr.responseText;
+            console.log(item);
+            if (item == 'true') {
+                btnTest.textContent = "Added";
+                btnTest.id = "btnTested"
+            } else {
+                pErr.textContent = '';
+            }
+        }
+    });
+
+  });
+</script>
+{{template "footer"}}

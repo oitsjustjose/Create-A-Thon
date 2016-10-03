@@ -1,0 +1,56 @@
+{{template "header"}}
+<body>
+  <!-- Should be a direct child of BODY -->
+  <div class="views">
+      <!-- Default view-page layout -->
+      <div class="view-main">
+        <div class="page">
+          <!-- page-content has additional login-screen content -->
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Create User Account</div>
+            <!-- create user form -->
+            <form method="POST" action="/api/editItem" id="form-create-item">
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-title label">Title</div>
+                      <div class="item-input">
+                        <input id="title" type="text" name="title" placeholder="Title">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-title label">ImageURL</div>
+                      <div class="item-input">
+                        <input id="imageURL" type="text" name="imageURL" placeholder="Image URL">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+
+                      <div class="item-title label">Description</div>
+                      <div class="item-input">
+                        <textarea id="description" name="description" placeholder="description"></textarea>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block">
+                <center>
+                  <button id="btnCreateItem" class="button button-raised button-fill color-cyan external"> Create Item </button>
+                </center>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+{{template "footer"}}
