@@ -1,4 +1,4 @@
-# Brogrammers
+# Create-A-Thon
 
 This repository is meant for the use of explicit users only. Pull Requests will only be accepted from specific users.
 
